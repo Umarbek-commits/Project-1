@@ -1,0 +1,43 @@
+/* animations.css */
+
+/* Плавное появление для всех элементов */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover эффекты для карточек */
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+/* Hero CTA button hover */
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+/* Back to top button */
+#backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  z-index: 1000;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
